@@ -1,0 +1,83 @@
+.flexContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+}
+
+ .input {
+    padding: 18px 12px;
+    border-radius: 8px;
+    border: 1px solid #828282;
+
+    &:hover {
+        border-color: #333333;
+    }
+
+    &:focus {
+        border-color:  #2962FF;
+        outline:none;
+    }
+}
+
+label {
+    font-size: 12px;
+    display: block;
+
+    &:focus {
+        color: #2962FF;
+    }
+}
+
+.error {
+    border-color: red;
+
+    &:focus {
+        color: red;
+    }
+}
+
+.disabled {
+    cursor: none;
+    pointer-events: none;
+    background-color: #E0E0E0;
+    border: unset;
+}
+
+small {
+    display: block;
+    font-size: 10px;
+    color: #828282
+}
+
+.startIcon {
+    padding-left: 30px;
+    background: url("../../assets/call.svg") no-repeat scroll 5px 15px;
+    background-size: 20px;
+
+}
+
+.endIcon {
+    padding-right: 30px;
+    background: url("../../assets/password.svg") no-repeat 180px 16px;
+    background-size: 20px;
+
+}
+
+.fullWidth {
+    display: block;
+    width: calc(100% - 30px);
+}
+
+.sm {
+    padding: 10px 12px;
+}
+
+.lg {
+    padding-right: 50px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .flexContainer {
+        grid-template-columns: repeat(1, auto);
+    }
+}
